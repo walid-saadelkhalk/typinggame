@@ -38,7 +38,6 @@ guider
 bureau
 savane
 cloche
-equipe
 otarie
 mobile
 bonjour

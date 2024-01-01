@@ -6,6 +6,7 @@ import numpy as np
 import random
 
 pygame.init()
+pygame.mixer.init()
 
 # création de la fenêtre
 width, height = 709, 401
@@ -35,6 +36,11 @@ titre_jeu = titre_font.render("TYPING KONOHA", True, (216, 62, 17))
 bouton_font = pygame.font.Font("font/njnaruto.ttf", 30)
 bouton_jouer = bouton_font.render("JOUER", True, (216, 62, 17))
 bouton_quitter = bouton_font.render("QUITTER", True, (216, 62, 17))
+
+#musique
+pygame.mixer.music.load("music/sign.mp3")
+pygame.mixer.music.play(2)
+
 
 
 
@@ -227,6 +233,7 @@ def jeu():
 running = False
 while True:
     running = True
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -250,5 +257,6 @@ while True:
     fenetre.blit(titre_jeu, (width // 2 - titre_jeu.get_width() // 2, 30))
     fenetre.blit(bouton_jouer, (width // 2 - bouton_jouer.get_width() // 2, 250))
     fenetre.blit(bouton_quitter, (width // 2 - bouton_quitter.get_width() // 2, 300))
+    
 
     pygame.display.flip()

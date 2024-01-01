@@ -38,6 +38,8 @@ bouton_quitter = bouton_font.render("QUITTER", True, (216, 62, 17))
 
 
 
+
+
 text = None
 chosen_word = None
 pressed_word = None
